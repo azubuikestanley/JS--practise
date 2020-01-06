@@ -66,8 +66,6 @@ var myList = [["cereal", 3], ["milk", 2], ["banana", 3],["Juice", 2], ["eggs", 1
 console.log(myList); 
 console.log("---------------------");
 
-//Write reusable Code with Functions
-console.log("---------------------");
 
 
 

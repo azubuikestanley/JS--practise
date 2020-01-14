@@ -56,14 +56,13 @@ function printManyTimes(str) {
     for(let i = 0; i < str.length; i += 2) {
         console.log(sentence); 
     }
-    //a good to remember a variable is a constant is to use all cap letters as shown below in comment
+    //a good way to remember that a variable is a constant is to use all cap letters as shown below
     
     const SENTENCE = str + " is Amazing";
      
     for(let i = 0; i < str.length; i += 2) {
         console.log(SENTENCE); 
     }
-   
 }
 
 printManyTimes("freeCodeCamp");
@@ -82,14 +81,55 @@ function editInPlace() {
 
 }
 editInPlace();
-console.log(s)
+console.log(s);
 console.log("---------------------"); 
 
-//Prevent Object Mutation  2:44:54
+//Prevent Object Mutation
+function freezeObj() {
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI: 3.14
+    };
+
+    /*const variable declared as array or object can still be mutated so
+    use object.freeze to stop the const variable from mutating*/ 
+    Object.freeze(MATH_CONSTANTS)
+
+    try {
+        MATH_CONSTANTS.PI = 99;
+    } catch( ex ) {
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+
+console.log(PI);
+console.log("---------------------");
+
+//Use Arrow Functions to write concise Anonymous Functions
+/*  Example of anonymous below, (a function without a name)
+var magnet = function() {
+    return new Date();
+};
+*/
+//Above function can be writen as
+var magnet = () => {
+    return new Date();
+};
+//Above code can still be shortened further if function is returning one value
+var magnet = () => new Date();
+console.log(magnet);
 console.log("---------------------"); 
 
+//Write Arrow functions with Parameters
+/*
+var myConcat = function(arr1, arr2) {
+    return arr1.concat(arr2);
+};
+function above can be written in an arrow function as shown below*/
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
 
-
-
-
+console.log(myConcat([1, 2], [3, 4, 5]));
+console.log("---------------------"); 
 

@@ -199,16 +199,6 @@ bicycle.setGear(3);
 console.log(bicycle.gear);
 console.log("---------------------"); 
 
-//Use class syntax to define a constructor function
-// 3:12:56
-console.log("---------------------"); 
-
-
-
-
-
-
-
 
 
 
